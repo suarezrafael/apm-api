@@ -151,7 +151,7 @@ O agente vai ler o plano, executar cada etapa em ordem e reportar progresso.
 
 ## Dicas para Melhores Resultados
 
-### ✅ Seja específico sobre o contexto
+###  Seja específico sobre o contexto
 ```
 // Bom — fornece todos os detalhes necessários
 @workspace Criar HomeworkTopicService com injeção de IHomeworkTopicRepository e ICacheRepository,
@@ -161,19 +161,19 @@ cache de 10 min para GetByIdAsync, lançar NotFoundException quando não encontr
 @workspace Criar service para homework
 ```
 
-### ✅ Referencie arquivos existentes como exemplos
+###  Referencie arquivos existentes como exemplos
 ```
 @workspace Criar StudentHomeworkController seguindo o mesmo padrão de EssayController.cs
 ```
 
-### ✅ Use os planos de implementação para trabalho estruturado
+###  Use os planos de implementação para trabalho estruturado
 Para features complexas, sempre inicie com um arquivo de plano em `docs/`:
 ```
 @workspace Com base em docs/implementation-plan-homework-api.md,
 execute apenas a Fase 1 (entidades de domínio)
 ```
 
-### ✅ Valide após geração
+###  Valide após geração
 Após o agente gerar código, sempre peça uma revisão:
 ```
 @workspace Revise os arquivos gerados e verifique se estão de acordo com
