@@ -1,4 +1,4 @@
-# Plano de Implementação — API de Temas de Casa (Homework Topics)
+﻿# Plano de Implementação — API de Temas de Casa (Homework Topics)
 
 ## Visão Geral
 
@@ -289,7 +289,7 @@ src/02-Application/Services/StudentHomeworkService.cs
 - [ ] Validators com mensagens em português
 - [ ] Services com `async/await` em todos os métodos
 - [ ] Logger injetado e usado nos métodos de escrita
-- [ ] Exceções do namespace `Redacao.Shared.Exceptions`
+- [ ] Exceções do namespace `<NomeDoProjeto>.Shared.Exceptions`
 
 ---
 

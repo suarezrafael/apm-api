@@ -1,4 +1,4 @@
-# Agent Skills — apm-api
+﻿# Agent Skills — apm-api
 
 Este arquivo define as **habilidades (skills)** disponíveis para o agente GitHub Copilot neste repositório.
 Habilite em: **Ferramentas > Opções > GitHub Copilot > Habilitar Habilidades do Agente dos arquivos SKILL.md**.
@@ -89,7 +89,7 @@ com métodos: GetBySchoolAsync(int schoolId), GetByStatusAsync(int statusId)
 **Convenções aplicadas:**
 - Primary constructor com injeção do repositório + `ILogger<T>`
 - `async/await` em todos os métodos
-- Exceções do namespace `Redacao.Shared.Exceptions`
+- Exceções do namespace `<NomeDoProjeto>.Shared.Exceptions`
 
 ---
 

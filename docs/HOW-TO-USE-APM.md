@@ -1,4 +1,4 @@
-# Como Usar o APM (Agentic Package Manager) no Visual Studio
+﻿# Como Usar o APM (Agentic Package Manager) no Visual Studio
 
 Este guia explica como usar o **GitHub Copilot Agent** no Visual Studio 2026 para criar e expandir a **apm-api** de forma assistida, respeitando as convenções de arquitetura definidas neste repositório.
 
@@ -214,7 +214,7 @@ apm-api/
 → Confirme que `SKILL.md` está na raiz do repositório e a opção "Habilitar Habilidades do Agente" está ativa
 
 **O agente está gerando código com namespace errado:**
-→ Referencie explicitamente o namespace: "use o namespace `Redacao.Application.Services`"
+→ Referencie explicitamente o namespace: "use o namespace `<NomeDoProjeto>.Application.Services`"
 
 **O agente não está incluindo os headers X-User-Profile e X-SchoolId:**
 → Referencie o arquivo de instruções: "siga `.github/instructions/csharp-api.instructions.md` para o controller"

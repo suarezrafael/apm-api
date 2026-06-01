@@ -1,4 +1,4 @@
----
+﻿---
 applyTo: "src/**/*.cs"
 ---
 
@@ -11,7 +11,7 @@ Estas instruções se aplicam a todos os arquivos `.cs` dentro de `src/` e compl
 ## 1. Entidades de Domínio (`03-Domain/Entities/`)
 
 ```csharp
-namespace Redacao.Domain.Entities
+namespace <NomeDoProjeto>.Domain.Entities
 {
 	public class HomeworkTopic : BaseDomainEntity
 	{
@@ -41,7 +41,7 @@ namespace Redacao.Domain.Entities
 ## 2. Enums (`03-Domain/Enum/`)
 
 ```csharp
-namespace Redacao.Domain.Enum
+namespace <NomeDoProjeto>.Domain.Enum
 {
 	public enum HomeworkTopicStatusEnum
 	{
@@ -58,7 +58,7 @@ namespace Redacao.Domain.Enum
 ## 3. DTOs de Request (`02-Application/Dtos/Requests/<Recurso>/`)
 
 ```csharp
-namespace Redacao.Application.Dtos.Requests.HomeworkTopic
+namespace <NomeDoProjeto>.Application.Dtos.Requests.HomeworkTopic
 {
 	public record HomeworkTopicCreateRequest(
 		string Title,
@@ -91,7 +91,7 @@ namespace Redacao.Application.Dtos.Requests.HomeworkTopic
 ## 4. DTOs de Response (`02-Application/Dtos/Responses/<Recurso>/`)
 
 ```csharp
-namespace Redacao.Application.Dtos.Responses.HomeworkTopic
+namespace <NomeDoProjeto>.Application.Dtos.Responses.HomeworkTopic
 {
 	public record HomeworkTopicResponse(
 		Guid Id,
@@ -110,9 +110,9 @@ namespace Redacao.Application.Dtos.Responses.HomeworkTopic
 
 ```csharp
 using FluentValidation;
-using Redacao.Application.Dtos.Requests.HomeworkTopic;
+using <NomeDoProjeto>.Application.Dtos.Requests.HomeworkTopic;
 
-namespace Redacao.Application.Validators
+namespace <NomeDoProjeto>.Application.Validators
 {
 	public class HomeworkTopicCreateRequestValidator : AbstractValidator<HomeworkTopicCreateRequest>
 	{
@@ -140,7 +140,7 @@ namespace Redacao.Application.Validators
 ## 6. Interface de Service (`02-Application/Services/`)
 
 ```csharp
-namespace Redacao.Application.Services
+namespace <NomeDoProjeto>.Application.Services
 {
 	public interface IHomeworkTopicService
 	{
@@ -159,10 +159,10 @@ namespace Redacao.Application.Services
 
 ```csharp
 using Microsoft.Extensions.Logging;
-using Redacao.Data.Interfaces;
-using Redacao.Shared.Exceptions;
+using <NomeDoProjeto>.Data.Interfaces;
+using <NomeDoProjeto>.Shared.Exceptions;
 
-namespace Redacao.Application.Services
+namespace <NomeDoProjeto>.Application.Services
 {
 	public class HomeworkTopicService(
 		IHomeworkTopicRepository repository,
@@ -203,10 +203,10 @@ namespace Redacao.Application.Services
 ## 8. Interface de Repositório (`04-Infra/4.2-Data/Interfaces/`)
 
 ```csharp
-using Redacao.Data.Interfaces;
-using Redacao.Domain.Entities;
+using <NomeDoProjeto>.Data.Interfaces;
+using <NomeDoProjeto>.Domain.Entities;
 
-namespace Redacao.Data.Interfaces
+namespace <NomeDoProjeto>.Data.Interfaces
 {
 	public interface IHomeworkTopicRepository : IRepository<HomeworkTopic, Guid>
 	{
@@ -221,12 +221,12 @@ namespace Redacao.Data.Interfaces
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
-using Redacao.Data;
-using Redacao.Data.Interfaces;
-using Redacao.Data.Repositories;
-using Redacao.Domain.Entities;
+using <NomeDoProjeto>.Data;
+using <NomeDoProjeto>.Data.Interfaces;
+using <NomeDoProjeto>.Data.Repositories;
+using <NomeDoProjeto>.Domain.Entities;
 
-namespace Redacao.Dtos.Repositories
+namespace <NomeDoProjeto>.Dtos.Repositories
 {
 	public class HomeworkTopicRepository(ProjectContext projectContext)
 		: BaseRepository<HomeworkTopic, Guid>(projectContext), IHomeworkTopicRepository
@@ -251,12 +251,12 @@ namespace Redacao.Dtos.Repositories
 ```csharp
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Redacao.Application.Dtos.Requests.HomeworkTopic;
-using Redacao.Application.Services;
+using <NomeDoProjeto>.Application.Dtos.Requests.HomeworkTopic;
+using <NomeDoProjeto>.Application.Services;
 using Swashbuckle.AspNetCore.Annotations;
 using System.ComponentModel.DataAnnotations;
 
-namespace Redacao.Controllers
+namespace <NomeDoProjeto>.Controllers
 {
 	[Authorize]
 	[ApiController]
@@ -321,12 +321,12 @@ namespace Redacao.Controllers
 ```csharp
 using Moq;
 using Xunit;
-using Redacao.Application.Services;
-using Redacao.Data.Interfaces;
-using Redacao.Domain.Entities;
+using <NomeDoProjeto>.Application.Services;
+using <NomeDoProjeto>.Data.Interfaces;
+using <NomeDoProjeto>.Domain.Entities;
 using Microsoft.Extensions.Logging;
 
-namespace Redacao.Tests.Services
+namespace <NomeDoProjeto>.Tests.Services
 {
 	public class HomeworkTopicServiceTests
 	{
