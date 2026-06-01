@@ -30,9 +30,9 @@ O **APM (Agentic Package Manager)** no Visual Studio é o conjunto de recursos d
 
 Vá em **Ferramentas > Opções > GitHub Copilot** e ative:
 
-- ✅ **Habilitar instruções personalizadas** de `.github/copilot-instructions.md`
-- ✅ **Habilitar carregamento de instruções** de `.github/instructions/*.instructions.md`
-- ✅ **Habilitar Habilidades do Agente** dos arquivos `SKILL.md`
+-  **Habilitar instruções personalizadas** de `.github/copilot-instructions.md`
+-  **Habilitar carregamento de instruções** de `.github/instructions/*.instructions.md`
+-  **Habilitar Habilidades do Agente** dos arquivos `SKILL.md`
 
 ### 2. Abrir o Copilot Chat
 
